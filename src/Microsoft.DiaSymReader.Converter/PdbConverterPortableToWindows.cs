@@ -601,7 +601,7 @@ namespace Microsoft.DiaSymReader.Tools
                 language is "C#" or "Visual Basic" or "F#" &&
                 TryConvertCompilerVersionToFileVersion(compilerVersionString, out var fileMajor, out var fileMinor, out var fileBuild, out var fileRevision))
             {
-                pdbWriter.AddCompilerInfo(fileMajor, fileMinor, fileBuild, fileRevision, $"{language} - {compilerVersionString}");
+                //pdbWriter.AddCompilerInfo(fileMajor, fileMinor, fileBuild, fileRevision, $"{language}");
             }
 
             SymReaderHelpers.GetWindowsPdbSignature(pdbReader.DebugMetadataHeader.Id, out var guid, out var stamp, out var age);
